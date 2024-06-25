@@ -1,44 +1,49 @@
 pipeline {
     agent any
-
     stages {
         stage('Preparação do Ambiente') {
             steps {
                 echo 'Instalando virtualenv...'
-                sh 'python3 -m venv venv'
-                sh './venv/bin/python -m ensurepip --upgrade'
-                sh './venv/bin/pip install -r requisitos.txt'
-                echo 'Dependências instaladas.'
-            }
-        }
-
-        stage('Execução do Teste Levenshtein') {
-            steps {
-                echo 'Executando teste Levenshtein...'
-                sh './venv/bin/python levenshtein_teste.py'
-                echo 'Teste Levenshtein concluído.'
-            }
-        }
-
-        stage('Verificação do Arquivo de Perguntas') {
-            steps {
-                echo 'Verificando arquivo de perguntas...'
                 script {
-                    if (fileExists('perguntas.txt')) {
-                        echo 'Arquivo perguntas.txt encontrado!'
+                    if (isUnix()) {
+                        sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requisitos.txt'
                     } else {
-                        error('Arquivo perguntas.txt não encontrado. Interrompendo o pipeline.')
+                        bat 'python -m venv venv && venv\\Scripts\\activate && pip install -r requisitos.txt'
                     }
                 }
-                echo 'Verificação do arquivo de perguntas concluída.'
             }
         }
-
+        stage('Execução do Teste Levenshtein') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh '. venv/bin/activate && python levenshtein_test.py'
+                    } else {
+                        bat 'venv\\Scripts\\activate && python levenshtein_test.py'
+                    }
+                }
+            }
+        }
+        stage('Verificação do Arquivo de Perguntas') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh '. venv/bin/activate && python verifica_perguntas.py'
+                    } else {
+                        bat 'venv\\Scripts\\activate && python verifica_perguntas.py'
+                    }
+                }
+            }
+        }
         stage('Execução do Chatbot') {
             steps {
-                echo 'Executando chatbot...'
-                sh './venv/bin/python chat_bot.py'
-                echo 'Chatbot executado.'
+                script {
+                    if (isUnix()) {
+                        sh '. venv/bin/activate && python chatbot.py'
+                    } else {
+                        bat 'venv\\Scripts\\activate && python chatbot.py'
+                    }
+                }
             }
         }
     }
