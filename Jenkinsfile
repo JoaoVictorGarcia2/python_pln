@@ -15,12 +15,14 @@ pipeline {
                             python3 -m venv venv
                             source venv/bin/activate
                             pip install -r requisitos.txt
+                            pip install python-Levenshtein
                         '''
                     } else {
                         bat '''
                             python -m venv venv
                             venv\\Scripts\\activate
                             pip install -r requisitos.txt
+                            pip install python-Levenshtein
                         '''
                     }
                 }
@@ -32,7 +34,7 @@ pipeline {
                     if (isUnix()) {
                         sh '''
                             source venv/bin/activate
-                            python levenshtein_test.py
+                            python tests/levenshtein_test.py
                         '''
                     } else {
                         bat '''
@@ -50,7 +52,19 @@ pipeline {
         }
         stage('Execução do Chatbot') {
             steps {
-                echo 'Execução do Chatbot'
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            source venv/bin/activate
+                            python chat_bot.py
+                        '''
+                    } else {
+                        bat '''
+                            venv\\Scripts\\activate
+                            python chat_bot.py
+                        '''
+                    }
+                }
             }
         }
     }
