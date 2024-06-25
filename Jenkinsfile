@@ -32,7 +32,7 @@ pipeline {
                     if (isUnix()) {
                         sh '''
                             source venv/bin/activate
-                            python tests/levenshtein_test.py
+                            python levenshtein_test.py
                         '''
                     } else {
                         bat '''
