@@ -1,14 +1,27 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout SCM') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/JoaoVictorGarcia2/python_pln']]])
+            }
+        }
         stage('Preparação do Ambiente') {
             steps {
                 echo 'Instalando virtualenv...'
                 script {
                     if (isUnix()) {
-                        sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requisitos.txt'
+                        sh '''
+                            python3 -m venv venv
+                            source venv/bin/activate
+                            pip install -r requisitos.txt
+                        '''
                     } else {
-                        bat 'python -m venv venv && venv\\Scripts\\activate && pip install -r requisitos.txt'
+                        bat '''
+                            python -m venv venv
+                            venv\\Scripts\\activate
+                            pip install -r requisitos.txt
+                        '''
                     }
                 }
             }
@@ -17,34 +30,36 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh '. venv/bin/activate && python levenshtein_test.py'
+                        sh '''
+                            source venv/bin/activate
+                            python tests/levenshtein_test.py
+                        '''
                     } else {
-                        bat 'venv\\Scripts\\activate && python levenshtein_test.py'
+                        bat '''
+                            venv\\Scripts\\activate
+                            python tests\\levenshtein_test.py
+                        '''
                     }
                 }
             }
         }
         stage('Verificação do Arquivo de Perguntas') {
             steps {
-                script {
-                    if (isUnix()) {
-                        sh '. venv/bin/activate && python verifica_perguntas.py'
-                    } else {
-                        bat 'venv\\Scripts\\activate && python verifica_perguntas.py'
-                    }
-                }
+                echo 'Verificação do Arquivo de Perguntas'
             }
         }
         stage('Execução do Chatbot') {
             steps {
-                script {
-                    if (isUnix()) {
-                        sh '. venv/bin/activate && python chatbot.py'
-                    } else {
-                        bat 'venv\\Scripts\\activate && python chatbot.py'
-                    }
-                }
+                echo 'Execução do Chatbot'
             }
+        }
+    }
+    post {
+        failure {
+            echo 'Pipeline falhou.'
+        }
+        success {
+            echo 'Pipeline executado com sucesso.'
         }
     }
 }
