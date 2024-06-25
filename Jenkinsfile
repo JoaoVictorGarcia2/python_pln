@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'devopsjourney1/myjenkinsagents:python'
+            label 'docker-agent-python'
+        }
+    }
 
     stages {
         stage('Preparação do Ambiente') {
@@ -9,12 +14,6 @@ pipeline {
         }
 
         stage('Instalação de Dependências') {
-            agent {
-                docker {
-                    image 'devopsjourney1/myjenkinsagents:python'
-                    label 'docker-agent-python'
-                }
-            }
             steps {
                 sh 'pip install -r requisitos.txt'
             }
