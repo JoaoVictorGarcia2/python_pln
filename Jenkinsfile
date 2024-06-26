@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'DIRETORIO', description: 'Caminho do diretorio')
+        string(name: 'Pergunte aqui!!', description: 'Insira apergunta no campo abaixo.')
     }
     environment{
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
