@@ -1,17 +1,20 @@
 pipeline {
     agent any
-
-    stages {
+    environment{
+        PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
+    stages {('Checkout SCM') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/brendamarini/python_pln']]])
+            }
         stage('Preparação do Ambiente') {
             steps {
-                
-                sh 'pip install -r requisitos.txt'
+                bat 'pip install -r requisitos.txt'
             }
-        }z
+        }
 
         stage('Execução do Teste Levenshtein') {
             steps {
-                sh 'python levenshtein_teste.py'
+                bat 'python levenshtein_teste.py'
             }
         }
 
@@ -29,8 +32,20 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                sh 'python chat_bot.py'
+                bat 'python chat_bot.py'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline concluído.'
+        }
+        success {
+            echo 'Pipeline executado com sucesso!'
+        }
+        failure {
+            echo 'Pipeline falhou. Verificar logs para mais detalhes.'
         }
     }
 }

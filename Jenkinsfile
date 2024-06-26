@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    environment {
+    environment{
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
     }
     stages {
+            
         stage('Preparação do Ambiente') {
             steps {
-                
-                echo 'ja instalado'
+                echo 'instalado'
             }
         }
 
@@ -33,6 +33,18 @@ pipeline {
             steps {
                 bat 'python chat_bot.py'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline concluído.'
+        }
+        success {
+            echo 'Pipeline executado com sucesso!'
+        }
+        failure {
+            echo 'Pipeline falhou. Verificar logs para mais detalhes.'
         }
     }
 }
