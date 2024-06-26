@@ -7,7 +7,7 @@ pipeline {
                 
                 sh 'pip install -r requisitos.txt'
             }
-        }
+        }z
 
         stage('Execução do Teste Levenshtein') {
             steps {
