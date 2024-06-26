@@ -63,12 +63,11 @@ pipeline {
                     if (isUnix()) {
                         sh '''
                             source venv/bin/activate
-                            echo -e "qual a capital do Brasil?\nsair\n" | python chat_bot.py
+                            python chat_bot.py
                         '''
                     } else {
                         bat '''
                             venv\\Scripts\\activate
-                            echo qual a capital do Brasil? > input.txt
                             echo sair >> input.txt
                             python chat_bot.py < input.txt
                         '''
