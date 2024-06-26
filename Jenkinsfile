@@ -47,16 +47,12 @@ pipeline {
         }
         stage('Verificação do Arquivo de Perguntas') {
             steps {
-                echo 'Verificação do Arquivo de Perguntas'
+                echo 'Verificando o arquivo de perguntas'
                 script {
                     if (isUnix()) {
-                        sh '''
-                            cat perguntas.txt
-                        '''
+                        sh 'cat perguntas.txt'
                     } else {
-                        bat '''
-                            type perguntas.txt
-                        '''
+                        bat 'type perguntas.txt'
                     }
                 }
             }
@@ -74,7 +70,7 @@ pipeline {
                             venv\\Scripts\\activate
                             echo qual a capital do Brasil? > input.txt
                             echo sair >> input.txt
-                            python chat_bot.py
+                            python chat_bot.py < input.txt
                         '''
                     }
                 }
