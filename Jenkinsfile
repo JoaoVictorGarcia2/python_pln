@@ -48,6 +48,17 @@ pipeline {
         stage('Verificação do Arquivo de Perguntas') {
             steps {
                 echo 'Verificação do Arquivo de Perguntas'
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            cat perguntas.txt
+                        '''
+                    } else {
+                        bat '''
+                            type perguntas.txt
+                        '''
+                    }
+                }
             }
         }
         stage('Execução do Chatbot') {
@@ -56,12 +67,14 @@ pipeline {
                     if (isUnix()) {
                         sh '''
                             source venv/bin/activate
-                            python chat_bot.py
+                            echo -e "qual a capital do Brasil?\nsair\n" | python chat_bot.py
                         '''
                     } else {
                         bat '''
                             venv\\Scripts\\activate
-                            python chat_bot.py
+                            echo qual a capital do Brasil? > input.txt
+                            echo sair >> input.txt
+                            type input.txt | python chat_bot.py
                         '''
                     }
                 }
