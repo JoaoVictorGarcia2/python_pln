@@ -1,3 +1,4 @@
 quem é você?|Sou um chatbot de perguntas e respostas.
 qual a sua função?|Responder perguntas com base no meu conhecimento.
 como você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
+O jenkins funciona no windows?|mais ou menos mais ou menos
