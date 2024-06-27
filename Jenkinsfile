@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Pergunte aqui', description: 'Insira a pergunta no campo abaixo.')
+        string(name: 'Pergunte_aqui', description: 'Insira a pergunta no campo abaixo.')
     }
 
     environment {
@@ -37,7 +37,7 @@ pipeline {
         stage('Execução do Chatbot') {
             steps {
                 script {
-                    def pergunta = params.user_question
+                    def pergunta = params.Pergunte_aqui
                     bat "python chat_bot.py \"${pergunta}\""
                 }
             }
