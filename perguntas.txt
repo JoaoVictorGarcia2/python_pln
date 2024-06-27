@@ -9,4 +9,4 @@ qual o planeta mais quente do sistema solar?|Vênus
 quem pintou a Mona Lisa?|Leonardo da Vinci
 quem escreveu Romeu e Julieta?|William Shakespeare
 você é inteligente?|Estou aprendendo a ser cada vez mais inteligente.
-você gosta de conversar?|Sim, adoro conversar e responder perguntas!
+você gósta de conversar?|Sim, adoro conversar e responder perguntas!
