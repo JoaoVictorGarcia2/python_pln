@@ -2,17 +2,3 @@ quem é você?|Sou um chatbot de perguntas e respostas.
 qual a sua função?|Responder perguntas com base no meu conhecimento.
 como você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
 O jenkins funciona no windows?|mais ou menos mais ou menos
-quem é o presidente dos EUA?|Joe Biden
-qual é a capital da França?|Paris
-o que é a teoria da relatividade?|Uma teoria proposta por Albert Einstein
-quem foi o primeiro homem a pisar na Lua?|Neil Armstrong
-qual é a fórmula da água?|H2O
-o que é o Big Bang?|A teoria que explica a origem do universo
-qual é a moeda do Japão?|Iene
-qual é o maior oceano do mundo?|Oceano Pacífico
-o que é fotossíntese?|Processo pelo qual as plantas produzem alimento usando luz solar
-qual é a linguagem de programação mais popular?|Depende do contexto, mas atualmente Python é muito popular
-quem é o criador do Facebook?|Mark Zuckerberg
-qual é o principal ingrediente do pão?|Farinha
-qual é a capital da Alemanha?|Berlim
-quem pintou A Ceia?|Leonardo da Vinci
