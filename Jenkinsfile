@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Pergunte aqui!', description: 'Insira a pergunta no campo abaixo.')
+        string(name: 'Pergunte aqui', description: 'Insira a pergunta no campo abaixo.')
     }
 
     environment {
