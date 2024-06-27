@@ -1,4 +1,9 @@
 quem é você?|Sou um chatbot de perguntas e respostas.
 qual a sua função?|Responder perguntas com base no meu conhecimento.
-comó você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
-
+como você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
+O jenkins funciona no windows?|mais ou menos mais ou menos
+quem é o presidente dos EUA?|Joe Biden
+qual é a capital da França?|Paris
+o que é a teoria da relatividade?|Uma teoria proposta por Albert Einstein
+quem foi o primeiro homem a pisar na Lua?|Neil Armstrong
+qual e a formula da agua?|H2O
