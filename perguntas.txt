@@ -1,12 +1,60 @@
-quem é você?|Sou um chatbot de perguntas e respostas.
-qual a sua função?|Responder perguntas com base no meu conhecimento.
-como você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
-quem te criou?|Fui criado por um programador usando Python.
-você pode aprender coisas novas?|Ainda não, mas meus criadores estão trabalhando nisso!
-qual a capital do Brasil?|Brasília
-quando o Brasil foi descoberto?|Em 1500.
-qual o planeta mais quente do sistema solar?|Vênus
-quem pintou a Mona Lisa?|Leonardo da Vinci
-quem escreveu Romeu e Julieta?|William Shakespeare
-você é inteligente?|Estou aprendendo a ser cada vez mais inteligente.
-você gósta de conversar?|Sim, adoro conversar e responder perguntas!
+ual a capital da Italia? | Roma
+Qual o passaro que nao voa e e nativo da Antartica? | Pinguim
+Quem escreveu "Orgulho e Preconceito"? | Jane Austen
+Qual o maior mamifero terrestre carnivoro? | Urso polar
+Em que ano ocorreu a Revolucao Francesa? |
+Qual a capital da Espanha? | Madrid
+Qual o animal mais venenoso do mundo? | Vespa do mar
+Quem escreveu "O Pequeno Principe"? | Antoine de Saint-Exupery
+Qual o continente mais frio do mundo? | Antartica
+Em que ano ocorreu a Independencia do Brasil? |
+Qual a capital de Portugal? | Lisboa
+Qual o metal mais caro do mundo? | Rodio
+Quem escreveu "Cem Anos de Solidao"? | Gabriel Garcia Marquez
+Qual o maior lago de agua doce do mundo? | Lago Superior
+Em que ano ocorreu a queda do Imperio Romano? | d.C.
+Qual a capital da Alemanha? | Berlim
+Qual o animal com a maior expectativa de vida? | Tartaruga-gigante
+Quem escreveu "Crime e Castigo"? | Fiodor Dostoievski
+Qual o maior arquipelago do mundo? | Indonesia
+Em que ano ocorreu a Revolucao Russa? |
+Qual a capital do Reino Unido? | Londres
+Qual o animal com o maior cerebro em relacao ao corpo? | Formiga
+Quem escreveu "Odisseia"? | Homero
+Qual o maior mar do mundo? | Mar da China Meridional
+Em que ano a bomba atomica foi lancada sobre Hiroshima? |
+Qual a capital do Canada? | Ottawa
+Qual o maior reptil do mundo? | Crocodilo-de-agua-salgada
+Quem escreveu "Hamlet"? | William Shakespeare
+Qual a maior ilha do mundo? | Groenlandia
+Em que ano ocorreu a Revolucao Industrial? | Seculo XVIII
+Qual a capital da India? | Nova Delhi
+Qual o animal com mais ossos no corpo? | Cobra
+Quem escreveu "Don Juan"? | Lord Byron
+Qual o maior vulcao do mundo? | Mauna Loa
+Em que ano ocorreu a Guerra do Vietna? | -
+Qual a capital da Australia? | Camberra
+Qual o animal mais inteligente do mundo? | Chimpanze
+Quem escreveu "Fausto"? | Johann Wolfgang von Goethe
+Qual o maior pais do mundo em area? | Russia
+Em que ano a internet se tornou publica? |
+Qual a capital do Mexico? | Cidade do Mexico
+Qual o animal mais lento do mundo? | Preguica-de-tres-dedos
+Quem escreveu "Guerra e Paz"? | Liev Tolstoi
+Qual o maior produtor de cafe do mundo? | Brasil
+Em que ano ocorreu o Renascimento? | Seculos XIV a XVI
+Qual a capital da China? | Pequim
+Qual o animal com a maior forca de mordida? | Crocodilo-de-agua-salgada
+Quem escreveu "Os Lusiadas"? | Luis de Camoes
+Qual o maior pais da America do Sul? | Brasil
+Em que ano o Titanic afundou? |
+Qual a capital da Grecia? | Atenas
+Qual o animal com o maior numero de patas? | Milipede
+Quem escreveu "O Cortico"? | Aluisio Azevedo
+Qual o maior produtor de petroleo do mundo? | Estados Unidos
+Em que ano a Revolucao Cubana aconteceu? |
+Qual a capital da Turquia? | Ancara
+Qual o animal com a maior lingua em relacao ao corpo? | Camelao
+Quem escreveu "O Alienista"? | Machado de Assis
+Qual o maior produtor de cacau do mundo? | Costa do Marfim
+Em que ano a Netflix foi fundada? |
