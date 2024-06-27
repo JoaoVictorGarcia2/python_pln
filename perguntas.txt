@@ -6,3 +6,4 @@ quem é o presidente dos EUA?|Joe Biden
 qual é a capital da França?|Paris
 o que é a teoria da relatividade?|Uma teoria proposta por Albert Einstein
 quem foi o primeiro homem a pisar na Lua?|Neil Armstrong
+qual e a formula da agua?|H2O
