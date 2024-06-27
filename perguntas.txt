@@ -1,9 +1,16 @@
 quem é você?|Sou um chatbot de perguntas e respostas.
 qual a sua função?|Responder perguntas com base no meu conhecimento.
 como você funciona?|Eu procuro a pergunta mais parecida com a sua e te dou a resposta correspondente.
-O jenkins funciona no windows?|mais ou menos mais ou menos
-quem é o presidente dos EUA?|Joe Biden
-qual é a capital da França?|Paris
-o que é a teoria da relatividade?|Uma teoria proposta por Albert Einstein
-quem foi o primeiro homem a pisar na Lua?|Neil Armstrong
-qual e a formula da agua?|H2O
+quem te criou?|Fui criado por um programador usando Python.
+você pode aprender coisas novas?|Ainda não, mas meus criadores estão trabalhando nisso!
+qual o sentido da vida?|Essa é uma pergunta complexa, talvez você possa me perguntar algo mais simples.
+qual a capital do Brasil?|Brasília
+quem descobriu o Brasil?|Pedro Álvares Cabral
+quando o Brasil foi descoberto?|Em 1500.
+qual o animal mais rápido do mundo?|Guepardo
+qual o planeta mais quente do sistema solar?|Vênus
+quem pintou a Mona Lisa?|Leonardo da Vinci
+quem escreveu Romeu e Julieta?|William Shakespeare
+o que é inteligência artificial?|É a capacidade de máquinas imitarem a inteligência humana.
+você é inteligente?|Estou aprendendo a ser cada vez mais inteligente.
+você gosta de conversar?|Sim, adoro conversar e responder perguntas!
