@@ -38,7 +38,6 @@ pipeline {
             steps {
                 script {
                     def pergunta = params.user_question
-                    echo "'\${perguntas}\'"
                     bat "python chat_bot.py \"${pergunta}\""
                 }
             }
