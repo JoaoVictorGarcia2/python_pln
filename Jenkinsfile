@@ -2,16 +2,17 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Pergunte aqui!!', description: 'Insira apergunta no campo abaixo.')
+        string(name: 'user_question', description: 'Insira a pergunta no campo abaixo.')
     }
-    environment{
+
+    environment {
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
     }
+
     stages {
-            
         stage('Preparação do Ambiente') {
             steps {
-                echo 'instalado'
+                echo 'Instalando...'
             }
         }
 
@@ -35,7 +36,10 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                bat 'python chat_bot.py'
+                script {
+                    def pergunta = params.user_question
+                    bat "python chat_bot.py \"${pergunta}\""
+                }
             }
         }
     }
