@@ -2,35 +2,26 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Pergunta', defaultValue: 'Digite sua pergunta aqui', description: 'Insira a pergunta no campo abaixo.')
+        string(name: 'user_question', description: 'Insira a pergunta no campo abaixo.')
     }
-    environment{
+
+    environment {
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
     }
+
     stages {
         stage('Preparação do Ambiente') {
             steps {
-                echo 'Instalando virtualenv...'
-                script {
-                    bat '''
-                        python -m venv venv
-                        venv\\Scripts\\activate
-                        pip install -r requisitos.txt
-                        pip install python-Levenshtein
-                    '''
-                }
+                echo 'Instalando...'
             }
         }
+
         stage('Execução do Teste Levenshtein') {
             steps {
-                script {
-                    bat '''
-                        venv\\Scripts\\activate
-                        python tests\\levenshtein_test.py
-                    '''
-                }
+                bat 'python levenshtein_teste.py'
             }
         }
+
         stage('Verificação do Arquivo de Perguntas') {
             steps {
                 script {
@@ -42,18 +33,17 @@ pipeline {
                 }
             }
         }
+
         stage('Execução do Chatbot') {
             steps {
                 script {
-                    def perguntaUsuario = params.Pergunta
-                    bat """
-                        venv\\Scripts\\activate
-                        python chat_bot.py \"${perguntaUsuario}\"
-                    """
+                    def pergunta = params.user_question
+                    bat "python chat_bot.py \"${pergunta}\""
                 }
             }
         }
     }
+
     post {
         always {
             echo 'Pipeline concluído.'
