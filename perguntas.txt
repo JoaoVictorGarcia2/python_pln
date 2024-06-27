@@ -6,19 +6,3 @@ quem é o presidente dos EUA?|Joe Biden
 qual é a capital da França?|Paris
 o que é a teoria da relatividade?|Uma teoria proposta por Albert Einstein
 quem foi o primeiro homem a pisar na Lua?|Neil Armstrong
-qual é a fórmula da água?|H2O
-o que é o Big Bang?|A teoria que explica a origem do universo
-qual é a moeda do Japão?|Iene
-qual é o maior oceano do mundo?|Oceano Pacífico
-o que é fotossíntese?|Processo pelo qual as plantas produzem alimento usando luz solar
-quem foi Mahatma Gandhi?|Um líder político e espiritual da Índia
-quem é o criador do Facebook?|Mark Zuckerberg
-qual é o principal ingrediente do pão?|Farinha
-qual é a capital da Alemanha?|Berlim
-quem pintou A Última Ceia?|Leonardo da Vinci
-qual é a principal língua falada no Brasil?|Português
-quem descobriu a gravidade?|Isaac Newton
-qual é a principal causa do aquecimento global?|Emissão de gases de efeito estufa
-qual é o maior deserto do mundo?|Deserto do Saara
-quem foi Albert Einstein?|Um físico teórico conhecido pela teoria da relatividade
-qual é a principal fonte de energia renovável?|Energia solar
