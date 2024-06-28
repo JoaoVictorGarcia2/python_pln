@@ -47,6 +47,14 @@ pipeline {
     post {
         always {
             echo 'Pipeline concluído.'
+            emailext(
+                to: 'joaovictorgarcia514@gmail.com',
+                subject: "Pipeline: ${currentBuild.fullDisplayName}",
+                body: """
+                <p>O pipeline foi concluído com o seguinte status: ${currentBuild.currentResult}</p>
+                <p>Verifique os detalhes do build <a href="${env.BUILD_URL}">aqui</a>.</p>
+                """
+            )
         }
         success {
             echo 'Pipeline executado com sucesso!'
